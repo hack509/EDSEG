@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="École de Droit et des Sciences Économiques des Gonaïves – Formation juridique et économique d'excellence en Haïti.">
+  <title>EDSEG – École de Droit et des Sciences Économiques des Gonaïves</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Feuille de styles externe -->
+  <link rel="stylesheet" href="edseg-style.css" >
+</head>
+<body>
+
+<!-- ============================================================
+     BARRE SUPÉRIEURE
+     ============================================================ -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <span> Gonaïves, Artibonite, Haïti</span>
+      <a href="tel:+50900000000"> +509 00 00 0000</a>
+      <a href="mailto:info@edseg.edu.ht"> info@edseg.edu.ht</a>
+    </div>
+    <div class="topbar-right">
+      <a href="#admissions">Inscriptions 2024–2025 ouvertes</a>
+      <button class="lang-btn">🇭🇹 Kreyòl</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     EN-TÊTE / NAVIGATION
+     ============================================================ -->
+<header>
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <div class="logo-crest"><span>⚖</span></div>
+      <div class="logo-text">
+        <strong>EDSEG</strong>
+        <small>Gonaïves · Depuis 1998</small>
+      </div>
+    </a>
+
+    <!-- Navigation principale -->
+    <nav>
+      <a href="#accueil"    class="nav-link active">Accueil</a>
+      <a href="#apropos"    class="nav-link">À propos</a>
+      <a href="#facultes"   class="nav-link">Facultés</a>
+      <a href="#admissions" class="nav-link">Admissions</a>
+      <a href="#academique" class="nav-link">Vie Académique</a>
+      <a href="#actualites" class="nav-link">Actualités</a>
+      <a href="#contact"    class="nav-link">Contact</a>
+    </nav>
+
+    <a href="#admissions" class="nav-cta">S'inscrire</a>
+
+    <!-- Bouton hamburger (visible sur mobile) -->
+    <button class="hamburger" id="menuBtn" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+
+<!-- ============================================================
+     MENU MOBILE (overlay)
+     ============================================================ -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="closeMenu">✕</button>
+  <a href="#accueil"    onclick="closeMobile()">Accueil</a>
+  <a href="#apropos"    onclick="closeMobile()">À propos</a>
+  <a href="#facultes"   onclick="closeMobile()">Facultés</a>
+  <a href="#admissions" onclick="closeMobile()">Admissions</a>
+  <a href="#academique" onclick="closeMobile()">Vie Académique</a>
+  <a href="#actualites" onclick="closeMobile()">Actualités</a>
+  <a href="#contact"    onclick="closeMobile()">Contact</a>
+  <a href="#admissions" class="btn btn-primary" style="margin-top:16px; font-family:'Jost',sans-serif;" onclick="closeMobile()">S'inscrire →</a>
+</div>
+
+
+<!-- ============================================================
+     SECTION HERO
+     ============================================================ -->
+<section class="hero" id="accueil">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-deco"></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">École Supérieure · Gonaïves · Haïti</div>
+      <h1>Former les <em>Juristes</em> et<br>Économistes de demain</h1>
+      <p>L'École de Droit et des Sciences Économiques des Gonaïves offre une formation d'excellence en droit, économie et administration, au cœur de la région de l'Artibonite.</p>
+      <div class="hero-actions">
+        <a href="#admissions" class="btn btn-primary">S'inscrire maintenant →</a>
+        <a href="#facultes"   class="btn btn-outline">Nos facultés</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Statistiques -->
+  <div class="hero-stats">
+    <div class="container">
+      <div class="stat-item">
+        <div class="stat-num" id="count-facultes">3</div>
+        <div class="stat-label">Facultés</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" id="count-annees">4</div>
+        <div class="stat-label">Années</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" id="count-etudiants">500+</div>
+        <div class="stat-label">Étudiants</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" id="count-profs">25+</div>
+        <div class="stat-label">Professeurs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     BANDEAU DÉFILANT
+     ============================================================ -->
+<div class="marquee-bar" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Faculté des Sciences Juridiques</span>
+    <span class="marquee-item">Faculté des Sciences Économiques</span>
+    <span class="marquee-item">Faculté AES</span>
+    <span class="marquee-item">Inscriptions 2024–2025 ouvertes</span>
+    <span class="marquee-item">Excellence académique</span>
+    <span class="marquee-item">Formation professionnelle</span>
+    <span class="marquee-item">Gonaïves · Haïti</span>
+    <!-- Répétition pour le défilement continu -->
+    <span class="marquee-item">Faculté des Sciences Juridiques</span>
+    <span class="marquee-item">Faculté des Sciences Économiques</span>
+    <span class="marquee-item">Faculté AES</span>
+    <span class="marquee-item">Inscriptions 2024–2025 ouvertes</span>
+    <span class="marquee-item">Excellence académique</span>
+    <span class="marquee-item">Formation professionnelle</span>
+    <span class="marquee-item">Gonaïves · Haïti</span>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SECTION À PROPOS
+     ============================================================ -->
+<section class="welcome" id="apropos">
+  <div class="container">
+    <div class="welcome-grid">
+
+      <!-- Visuel -->
+      <div class="welcome-visual">
+        <div class="welcome-img-main">
+          <div class="welcome-img-inner">
+            <span class="big-letter">⚖</span>
+            <p>Droit · Économie · AES</p>
+          </div>
+        </div>
+        <div class="welcome-badge-float">
+          <strong>1998</strong>
+          <span>Fondée en</span>
+        </div>
+      </div>
+
+      <!-- Texte -->
+      <div class="welcome-text">
+        <div class="section-label">À propos de l'institution</div>
+        <h2 class="section-title">Une école d'excellence au <em>cœur d'Haïti</em></h2>
+        <p class="section-desc">L'EDSEG est une institution d'enseignement supérieur dédiée à la formation de professionnels compétents dans les domaines du droit, de l'économie et de l'administration économique et sociale.</p>
+
+        <div class="director-quote">
+          « Notre mission est de former des citoyens éclairés, capables d'apporter des solutions concrètes aux défis juridiques et économiques de notre nation. »
+          <div class="director-sig">
+            <div class="sig-line"></div>
+            <span>Le Directeur Général, EDSEG</span>
+          </div>
+        </div>
+
+        <div class="mission-vision">
+          <div class="mission-vision-item">
+            <h4>Mission</h4>
+            <p>Former des professionnels engagés pour le développement national.</p>
+          </div>
+          <div class="mission-vision-item">
+            <h4>Vision</h4>
+            <p>Devenir l'institution de référence en droit et économie en Haïti.</p>
+          </div>
+        </div>
+
+        <div class="welcome-actions">
+          <a href="#contact" class="btn btn-dark">Historique &amp; Organisation</a>
+          <a href="#contact" class="btn btn-outline" style="color:var(--navy); border-color:rgba(13,31,60,0.3)">Corps professoral</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION FACULTÉS
+     ============================================================ -->
+<section class="faculties" id="facultes">
+  <div class="container">
+
+    <div class="faculties-header">
+      <div class="section-label">Nos programmes</div>
+      <h2 class="section-title">Trois facultés, une <em>vision commune</em></h2>
+      <p class="section-desc">Chaque faculté offre un programme structuré sur 4 années, conçu pour préparer les étudiants à une carrière professionnelle réussie.</p>
+    </div>
+
+    <div class="faculties-grid">
+
+      <!-- Faculté 1 : Sciences Juridiques -->
+      <div class="faculty-card">
+        <div class="faculty-num">01</div>
+        <div class="faculty-icon">⚖️</div>
+        <h3>Faculté des Sciences Juridiques</h3>
+        <p>Formation complète en droit haïtien et international — droit civil, pénal, commercial, constitutionnel. Prépare aux métiers du droit et de la justice.</p>
+        <div class="faculty-years">
+          <span class="year-pill">1ère Année</span>
+          <span class="year-pill">2ème Année</span>
+          <span class="year-pill">3ème Année</span>
+          <span class="year-pill">4ème Année</span>
+        </div>
+        <div class="debouche-label">Débouchés professionnels</div>
+        <div class="debouche-text">Avocat · Magistrat · Notaire · Juriste d'entreprise · Fonctionnaire</div>
+        <a href="#contact" class="faculty-link">Voir le programme →</a>
+      </div>
+
+      <!-- Faculté 2 : Sciences Économiques -->
+      <div class="faculty-card">
+        <div class="faculty-num">02</div>
+        <div class="faculty-icon"></div>
+        <h3>Faculté des Sciences Économiques</h3>
+        <p>Analyse économique, macroéconomie, finance, comptabilité et gestion. Formation solide pour comprendre les enjeux économiques locaux et mondiaux.</p>
+        <div class="faculty-years">
+          <span class="year-pill">1ère Année</span>
+          <span class="year-pill">2ème Année</span>
+          <span class="year-pill">3ème Année</span>
+          <span class="year-pill">4ème Année</span>
+        </div>
+        <div class="debouche-label">Débouchés professionnels</div>
+        <div class="debouche-text">Économiste · Analyste financier · Comptable · Conseiller · Secteur ONG</div>
+        <a href="#contact" class="faculty-link">Voir le programme →</a>
+      </div>
+
+      <!-- Faculté 3 : AES -->
+      <div class="faculty-card">
+        <div class="faculty-num">03</div>
+        <div class="faculty-icon"></div>
+        <h3>Faculté AES</h3>
+        <p class="faculty-subtitle">Administration Économique et Sociale</p>
+        <p>Gestion administrative, politiques publiques, développement social et économique. Un programme interdisciplinaire unique en Artibonite.</p>
+        <div class="faculty-years">
+          <span class="year-pill">1ère Année</span>
+          <span class="year-pill">2ème Année</span>
+          <span class="year-pill">3ème Année</span>
+          <span class="year-pill">4ème Année</span>
+        </div>
+        <div class="debouche-label">Débouchés professionnels</div>
+        <div class="debouche-text">Administrateur · Gestionnaire public · Chargé de projets · ONG</div>
+        <a href="#contact" class="faculty-link">Voir le programme →</a>
+      </div>
+
+    </div>
+
+    <div class="faculties-cta">
+      <a href="#admissions" class="btn btn-primary">Commencer mon inscription →</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION ADMISSIONS
+     ============================================================ -->
+<section class="admissions" id="admissions">
+  <div class="admissions-inner container">
+    <div class="admissions-grid">
+
+      <!-- Étapes du processus -->
+      <div class="admissions-text">
+        <div class="section-label" style="color:var(--gold)">Rejoindre l'école</div>
+        <h2 class="section-title">Admissions <em style="color:var(--gold-light)">2024–2025</em></h2>
+        <p class="section-desc">Rejoignez une communauté académique engagée. Le processus d'admission est ouvert aux bacheliers souhaitant poursuivre des études supérieures.</p>
+
+        <div class="admission-steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Retrait du dossier</h4>
+              <p>Au secrétariat de l'école ou par téléchargement en ligne.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>Constitution du dossier</h4>
+              <p>Rassembler les pièces requises et compléter le formulaire.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Dépôt &amp; Entretien</h4>
+              <p>Déposer le dossier complet et participer à l'entretien d'orientation.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4>Confirmation &amp; Paiement</h4>
+              <p>Régler les frais d'inscription pour confirmer votre place.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary">Demander un dossier →</a>
+      </div>
+
+      <!-- Carte pièces + calendrier -->
+      <div class="admission-card">
+        <h3> Pièces requises</h3>
+        <ul class="doc-list">
+          <li>Diplôme de Baccalauréat (original + copie)</li>
+          <li>Relevé de notes du secondaire</li>
+          <li>Carte nationale d'identité (CIN)</li>
+          <li>Acte de naissance (original + copie)</li>
+          <li>4 photos d'identité récentes</li>
+          <li>Certificat de bonne vie et mœurs</li>
+          <li>Formulaire d'inscription complété</li>
+        </ul>
+
+        <h3 style="margin-top:28px"> Calendrier académique</h3>
+        <div class="calendar-grid">
+          <div class="cal-item"><div class="cal-date">Juil – Sept 2024</div><p>Inscriptions ouvertes</p></div>
+          <div class="cal-item"><div class="cal-date">Octobre 2024</div><p>Rentrée académique</p></div>
+          <div class="cal-item"><div class="cal-date">Janv – Fév 2025</div><p>Examens semestriels</p></div>
+          <div class="cal-item"><div class="cal-date">Juin 2025</div><p>Examens de fin d'année</p></div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary" style="width:100%; justify-content:center">S'inscrire maintenant →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION VIE ACADÉMIQUE
+     ============================================================ -->
+<section class="academique" id="academique">
+  <div class="container">
+
+    <div class="academique-header">
+      <div class="section-label">Campus &amp; services</div>
+      <h2 class="section-title">Vie <em>académique</em></h2>
+      <p class="section-desc">Un environnement propice à l'apprentissage, à la recherche et à l'épanouissement professionnel.</p>
+    </div>
+
+    <div class="academique-grid">
+      <div class="acad-card">
+        <div class="acad-icon"></div>
+        <h3>Emplois du temps</h3>
+        <p>Horaires de cours par faculté et par année académique.</p>
+      </div>
+      <div class="acad-card">
+        <div class="acad-icon"></div>
+        <h3>Examens</h3>
+        <p>Calendriers, résultats et procédures de rattrapage.</p>
+      </div>
+      <div class="acad-card">
+        <div class="acad-icon"></div>
+        <h3>Bibliothèque</h3>
+        <p>Ouvrages juridiques, économiques et ressources documentaires.</p>
+      </div>
+      <div class="acad-card">
+        <div class="acad-icon"></div>
+        <h3>Conférences</h3>
+        <p>Séminaires et événements académiques tout au long de l'année.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION ACTUALITÉS
+     ============================================================ -->
+<section class="actualites" id="actualites">
+  <div class="container">
+
+    <div class="actualites-header">
+      <div>
+        <div class="section-label">Restez informé</div>
+        <h2 class="section-title">Actualités &amp; <em>Événements</em></h2>
+      </div>
+      <a href="#contact" class="btn btn-dark">Toutes les actualités →</a>
+    </div>
+
+    <div class="news-grid">
+
+      <!-- Article principal (featured) -->
+      <div class="news-card featured">
+        <div class="news-img">
+          <div class="news-img-text">⚖</div>
+          <div class="news-tag">Événement</div>
+        </div>
+        <div class="news-body">
+          <div class="news-date">15 Septembre 2024</div>
+          <h3>Cérémonie officielle de rentrée académique 2024–2025</h3>
+          <p>L'EDSEG ouvre officiellement l'année académique 2024–2025 avec une cérémonie solennelle en présence du corps professoral, des étudiants et des autorités académiques de la région.</p>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="news-card">
+        <div class="news-img" style="height:140px">
+          <div class="news-img-text" style="font-size:40px"></div>
+          <div class="news-tag">Admissions</div>
+        </div>
+        <div class="news-body">
+          <div class="news-date">1er Juillet 2024</div>
+          <h3>Ouverture des inscriptions pour la promotion 2024–2025</h3>
+          <p>Les dossiers d'inscription sont disponibles au secrétariat et en ligne.</p>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="news-card">
+        <div class="news-img" style="height:140px">
+          <div class="news-img-text" style="font-size:40px"></div>
+          <div class="news-tag">Résultats</div>
+        </div>
+        <div class="news-body">
+          <div class="news-date">20 Juin 2024</div>
+          <h3>Résultats des examens de fin d'année 2023–2024 disponibles</h3>
+          <p>Les résultats définitifs sont affichés au secrétariat et sur le tableau officiel.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION CONTACT
+     ============================================================ -->
+<section class="contact" id="contact">
+  <div class="container">
+
+    <div class="contact-header">
+      <div class="section-label">Nous joindre</div>
+      <h2 class="section-title">Contact &amp; <em>Informations</em></h2>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Coordonnées -->
+      <div>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon"></div>
+            <div><h4>Adresse</h4><p>Gonaïves, Artibonite, Haïti</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"></div>
+            <div><h4>Téléphone</h4><p>+509 00 00 0000</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"></div>
+            <div><h4>Email</h4><p>info@edseg.edu.ht</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"></div>
+            <div><h4>Heures d'ouverture</h4><p>Lundi – Vendredi : 8h00 – 17h00</p></div>
+          </div>
+        </div>
+        <!-- Remplacer par une vraie iframe Google Maps -->
+        <div class="map-placeholder"> Carte · Gonaïves, Artibonite</div>
+      </div>
+
+      <!-- Formulaire de contact -->
+      <form class="contact-form" id="contactForm" onsubmit="return false;">
+        <h3>Envoyer un message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prenom">Prénom *</label>
+            <input type="text" id="prenom" placeholder="Jean">
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom *</label>
+            <input type="text" id="nom" placeholder="Pierre">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" placeholder="jean.pierre@email.com">
+        </div>
+        <div class="form-group">
+          <label for="objet">Objet</label>
+          <select id="objet">
+            <option>Demande d'information générale</option>
+            <option>Admissions &amp; inscriptions</option>
+            <option>Programmes académiques</option>
+            <option>Frais de scolarité</option>
+            <option>Partenariat académique</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" placeholder="Votre message..."></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" style="width:100%; justify-content:center" onclick="submitForm()">
+          Envoyer le message →
+        </button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PIED DE PAGE
+     ============================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Marque -->
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-crest" style="width:44px; height:44px">
+            <span style="font-size:14px">⚖</span>
+          </div>
+          <div class="logo-text">
+            <strong style="color:var(--white)">EDSEG</strong>
+            <small style="color:rgba(255,255,255,0.4)">Gonaïves · Haïti</small>
+          </div>
+        </a>
+        <p>L'École de Droit et des Sciences Économiques des Gonaïves forme depuis 1998 les juristes, économistes et administrateurs qui contribuent au développement d'Haïti.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-btn" aria-label="Twitter">tw</a>
+          <a href="mailto:info@edseg.edu.ht" class="social-btn" aria-label="Email"></a>
+        </div>
+      </div>
+
+      <!-- Facultés -->
+      <div class="footer-col">
+        <h4>Facultés</h4>
+        <ul>
+          <li><a href="#facultes">Sciences Juridiques</a></li>
+          <li><a href="#facultes">Sciences Économiques</a></li>
+          <li><a href="#facultes">AES</a></li>
+        </ul>
+      </div>
+
+      <!-- Navigation -->
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#academique">Vie académique</a></li>
+          <li><a href="#actualites">Actualités</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#"> Gonaïves, Artibonite</a></li>
+          <li><a href="tel:+50900000000"> +509 00 00 0000</a></li>
+          <li><a href="mailto:info@edseg.edu.ht">✉ info@edseg.edu.ht</a></li>
+          <li><a href="#admissions">🎓 S'inscrire</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2024 EDSEG – École de Droit et des Sciences Économiques des Gonaïves. Tous droits réservés.</span>
+      <span>
+        <a href="#contact">Politique de confidentialité</a> ·
+        <a href="#contact">Mentions légales</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Script externe (chargé en dernier pour de meilleures performances) -->
+<script src="edseg-script.js"></script>
+
+</body>
+</html>
